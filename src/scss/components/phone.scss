@@ -1,0 +1,37 @@
+@use "../general/variables";
+
+.phone {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media (min-width: variables.$md) {
+    margin-left: 0;
+  }
+
+  &__icon {
+    margin-right: 20px;
+
+    @media (min-width: variables.$md) {
+      margin-right: 10px;
+    }
+  }
+
+  &__label {
+    display: none;
+
+    @media (min-width: variables.$md) {
+      display: block;
+      color: var(--color-white);
+      font-weight: 500;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-error);
+      }
+    }
+  }
+}

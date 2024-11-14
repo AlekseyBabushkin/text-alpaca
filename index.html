@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/image/logo.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpaca</title>
+</head>
+
+<body>
+<div id="app">
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="header__logo" href="#">
+          <img src="/image/logo.svg" alt="Логотип" width="46" height="46">
+        </a>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Главная</a>
+            </li>
+
+            <li class="nav__item">
+              <div class="dropdown" data-accordion>
+                <button class="dropdown__toggle" data-accordion-toggle>
+                  <span>Основное меню</span>
+
+                  <span class="dropdown__arrow"></span>
+                </button>
+
+                <div class="dropdown__content" data-accordion-body>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Заказать вёрстку</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Отправить макет на проверку</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Хочу работать у вас!!!</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                      <div class="sublist" data-accordion>
+                        <button class="sublist__toggle" data-accordion-toggle>
+                          <span class="sublist__label">Есть предложение по работе с клиентами</span>
+
+                          <span class="sublist__arrow"></span>
+                        </button>
+
+                        <div class="sublist__content" data-accordion-body>
+                          <ul class="sublist__list">
+                            <li class="sublist__item">
+                              <a class="sublist__link" href="#">У меня есть оффер</a>
+                            </li>
+
+                            <li class="sublist__item">
+                              <a class="sublist__link" href="#">Сделать партнёром</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#">Наши сервисы</a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="tel:+13212223333" class="header__phone phone">
+          <img class="phone__icon" src="/image/icon-phone.svg" alt="Иконка телефона" width="24" height="24">
+
+          <span class="phone__label">+1 (321) 222 - 33 - 33</span>
+        </a>
+
+        <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" type="button">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="hero__bg">
+        <picture>
+          <img src="/image/hero-bg.jpg" alt="">
+        </picture>
+      </div>
+    </section>
+  </main>
+
+  <div class="main-overlay"></div>
+</div>
+
+<script type="module" src="/src/js/index.js"></script>
+</body>
+</html>

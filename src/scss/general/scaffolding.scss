@@ -1,0 +1,49 @@
+@use "variables";
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  min-width: variables.$min-width;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: variables.$font;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: variables.$container-width;
+  padding: 0 variables.$container-offset;
+  margin: 0 auto;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+:root {
+  --color-black: #131417;
+  --color-gray: #252830;
+  --color-white: #fafafa;
+
+  --color-error: #eb5757;
+  --color-warning: #f2994a;
+  --color-success: #5bc12c;
+}

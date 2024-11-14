@@ -1,0 +1,70 @@
+@use "../general/variables";
+
+.burger {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: 1s;
+
+  & span {
+    position: absolute;
+    left: 5px;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-warning);
+    transition-delay: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+  & span:before {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-warning);
+    content: "";
+    transition: transform 0.25s, top 0.25s 0.25s;
+    transition-duration: 0.25s;
+  }
+
+  & span:after {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-warning);
+    content: "";
+    transition: transform 0.25s, top 0.25s 0.25s;
+    transition-duration: 0.25s;
+  }
+
+  &.is-active span {
+    background: transparent;
+    transition-delay: 0.25s;
+    transition-duration: 0.1s;
+  }
+
+  &.is-active span:before {
+    top: 0;
+    transform: rotateZ(-45deg);
+    transition: top 0.25s, transform 0.25s 0.25s;
+  }
+
+  &.is-active span:after {
+    top: 0;
+    transform: rotateZ(45deg);
+    transition: top 0.4s, transform 0.25s 0.25s;
+  }
+
+  @media (min-width: variables.$lg) {
+    display: none;
+  }
+
+}
